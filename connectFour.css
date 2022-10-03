@@ -2,3 +2,34 @@ body {
   background-color: red;
   text-align: center
   }
+
+  /* create a 6x9 grid in the center of the page and make them circles  */
+
+  #board {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    justify-content: center;
+    text-align: center;
+    border: 2px solid;
+    width: 100%;
+    max-width: 750px;
+    background-color: black;
+    box-shadow: 0 0px 20px 0;
+    
+  }
+/* display each class box */
+  .box {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 50%;
+    font-size: 120px;
+    text-align: center;
+    justify-content: center;
+    border: solid;
+    box-shadow: 0 0px 20px 0;
+    cursor: pointer;
+    background-color: antiquewhite;
+  }
+
+  
