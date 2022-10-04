@@ -17,15 +17,13 @@ const displayInTurn = document.querySelector('#inTurnPlayer')
 
 document.querySelectorAll('.box').forEach((box) => {
   box.addEventListener('click', () => {
-    // if (box[i + 6].classList.contains('taken')) {
     if (inTurn === 'yellow') {
-      // box[i].classList.add('taken')
-      // box[i].classList.add('yellow')
       inTurn = 'blue'
       displayInTurn.innerHTML = inTurn
       return (box.style.backgroundColor = 'yellow')
     } else {
       inTurn = 'yellow'
+      displayInTurn.innerHTML = inTurn
       return (box.style.backgroundColor = 'blue')
     }
   })
