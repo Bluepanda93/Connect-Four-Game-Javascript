@@ -32,5 +32,12 @@ body {
     background-color: antiquewhite;
     margin: auto;
   }
-
-  
+/* change button color  */
+  button {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; 
+    background-color: greenyellow;
+  }
+  /* change font for status */
+  h2, h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }

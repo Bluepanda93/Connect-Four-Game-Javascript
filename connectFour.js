@@ -2,7 +2,7 @@
 const changeStatus = document.querySelector('#board')
 let inTurn = 'yellow'
 // let replayGame = document.getElementById('replay')
-let value = ['', '', '', '', '', '', '', '', '']
+let value = ['']
 const winner = document.querySelector('#valueWinner')
 let noWinner = 'draw'
 let gameLive = true
@@ -21,7 +21,7 @@ document.querySelectorAll('.box').forEach((box) => {
       inTurn = 'blue'
       displayInTurn.innerHTML = inTurn
       return (box.style.backgroundColor = 'yellow')
-    } else {
+    } else if (inTurn === 'blue') {
       inTurn = 'yellow'
       displayInTurn.innerHTML = inTurn
       return (box.style.backgroundColor = 'blue')
