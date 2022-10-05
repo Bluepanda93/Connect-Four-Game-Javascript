@@ -12,12 +12,14 @@ column.forEach((box) => {
     let cells = event.currentTarget.children
     console.log(cells)
     if (inTurn === 'yellow') {
+      displayInTurn.innerHTML = 'blue'
       cells[last].classList.add('yellow')
       inTurn = 'blue'
       if (last >= 0) {
         last--
       }
-    } else {
+    } else if (inTurn === 'blue') {
+      displayInTurn.innerHTML = 'yellow'
       cells[last].classList.add('blue')
       inTurn = 'yellow'
       if (last >= 0) {
