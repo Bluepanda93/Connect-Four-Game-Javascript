@@ -48,33 +48,61 @@ let value = [
 ]
 const winner = document.querySelector('#valueWinner')
 // let noWinner = 'draw'
-let gameLive = true
+// let gameLive = true
 const displayInTurn = document.querySelector('#inTurnPlayer')
-const boxes = document.querySelectorAll('.box')
+let column = document.querySelectorAll('.box')
 let yellow = document.querySelector('.yellow')
+
+// let column = document.querySelector('id-data')
 // alternate from yellow to blue
 
 //if my color is white then it should change to whatever player turn it is else it should do nothing
-document.querySelectorAll('.cell').forEach((cell) => {
-  cell.addEventListener('click', () => {
+
+column.forEach((box) => {
+  let last = 5
+  box.addEventListener('click', (event) => {
+    let cells = event.currentTarget.children
+    console.log(cells)
     if (inTurn === 'yellow') {
+      cells[last].classList.add('yellow')
       inTurn = 'blue'
-      displayInTurn.innerHTML = inTurn
-      // console.log(box.style.backgroundColor)
-      // winCondition()
-      return (box.style.backgroundColor = 'yellow')
-    }
-    if (inTurn === 'blue') {
-      inTurn = 'yellow'
-      displayInTurn.innerHTML = inTurn
-      // winCondition()
-      return (box.style.backgroundColor = 'blue')
-      // } else if (inTurn !== 'blue' || 'yellow') {
-      //   inTurn !== 'yellow' || 'blue'
-      //   return (box.style.backgroundColor = 'white')
+      if (last >= 0) {
+        last--
+      }
     } else {
-      return false
+      cells[last].classList.add('blue')
+      inTurn = 'yellow'
+      if (last >= 0) {
+        last--
+      }
     }
+    // for (let i = 0; i < cells.length; i++) {
+    //   console.log(cells[i])
+    // }
+    // for (let i = 5; i >= 0; i--) {
+    //   console.log(i)
+    // }
+    // for (let i = 5; i > -1; i--) {
+    //   if (
+    //     document.querySelectorAll('.cell')[i].style.backgroundColor ===
+    //     'antiquewhite'
+    //   ) {
+    //     if (inTurn === 'yellow') {
+    //       inTurn = 'blue'
+    //       displayInTurn.innerHTML = inTurn
+    //       return (document.querySelector('.cell').style.backgroundColor =
+    //         'yellow')
+    //     }
+    //     if (inTurn === 'blue') {
+    //       inTurn = 'yellow'
+    //       displayInTurn.innerHTML = inTurn
+    //       return (document.querySelector('.cell').style.backgroundColor =
+    //         'blue')
+    //     } else {
+    //       return false
+    //     }
+    //   }
+    // }
   })
 })
 
@@ -123,7 +151,8 @@ document.querySelectorAll('.cell').forEach((cell) => {
 // }
 
 const replayGame = document.getElementById('replay')
+const cell = document.querySelectorAll('cell')
 
 replayGame.addEventListener('click', () => {
-  return box.remove.backgroundColor(box)
+  return cell.remove.backgroundColor('yellow')
 })

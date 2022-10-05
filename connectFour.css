@@ -53,6 +53,7 @@ body {
   button {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; 
     background-color: greenyellow;
+    justify-content: auto;
   }
   /* change font for status */
   h2, h1 {
