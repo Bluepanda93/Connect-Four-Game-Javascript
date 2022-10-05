@@ -2,41 +2,128 @@
 const changeStatus = document.querySelector('#board')
 let inTurn = 'yellow'
 // let replayGame = document.getElementById('replay')
-let value = ['']
+let value = [
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  ''
+]
 const winner = document.querySelector('#valueWinner')
-let noWinner = 'draw'
+// let noWinner = 'draw'
 let gameLive = true
 const displayInTurn = document.querySelector('#inTurnPlayer')
-// let resetGame = () => {
-//   for (let i = 0; i <= 43; i++) {
-//     clearBox(i)
-//   }
-// }
-
+const boxes = document.querySelectorAll('.box')
+let yellow = document.querySelector('.yellow')
 // alternate from yellow to blue
 
-document.querySelectorAll('.box').forEach((box) => {
-  box.addEventListener('click', () => {
+//if my color is white then it should change to whatever player turn it is else it should do nothing
+document.querySelectorAll('.cell').forEach((cell) => {
+  cell.addEventListener('click', () => {
     if (inTurn === 'yellow') {
       inTurn = 'blue'
       displayInTurn.innerHTML = inTurn
+      // console.log(box.style.backgroundColor)
+      // winCondition()
       return (box.style.backgroundColor = 'yellow')
-    } else if (inTurn === 'blue') {
+    }
+    if (inTurn === 'blue') {
       inTurn = 'yellow'
       displayInTurn.innerHTML = inTurn
+      // winCondition()
       return (box.style.backgroundColor = 'blue')
+      // } else if (inTurn !== 'blue' || 'yellow') {
+      //   inTurn !== 'yellow' || 'blue'
+      //   return (box.style.backgroundColor = 'white')
+    } else {
+      return false
     }
   })
 })
 
-// const replayGame = document.getElementById('replay')
+// const winCondition = () => {
+//   if (
+//     value[0] === 'yellow' &&
+//     value[1] === 'yellow' &&
+//     value[2] === 'yellow' &&
+//     value[3] === 'yellow'
+//   ) {
+//     winner.innerHTML = 'yellow Won'
+//   }
+// } else if (value[0] === 'o' && value[1] === 'o' && value[2] === 'o') {
+//   winner.innerHTML = 'O Won'
+// } else if (value[3] === 'o' && value[4] === 'o' && value[5] === 'o') {
+//   winner.innerHTML = 'O Won'
+// } else if (value[6] === 'o' && value[7] === 'o' && value[8] === 'o') {
+//   winner.innerHTML = 'O Won'
+// } else if (value[0] === 'o' && value[3] === 'o' && value[6] === 'o') {
+//   winner.innerHTML = 'O Won'
+// } else if (value[1] === 'o' && value[4] === 'o' && value[7] === 'o') {
+//   winner.innerHTML = 'O Won'
+// } else if (value[2] === 'o' && value[5] === 'o' && value[8] === 'o') {
+//   winner.innerHTML = 'O Won'
+// } else if (value[2] === 'O Won' && value[4] === 'o' && value[6] === 'o') {
+//   winner.innerHTML = 'O Won'
+//   gameLive = false
+// }
+// if (value[0] === 'x' && value[4] === 'x' && value[8] === 'x') {
+//   winner.innerHTML = 'x won'
+// } else if (value[0] === 'x' && value[1] === 'x' && value[2] === 'x') {
+//   winner.innerHTML = 'x won'
+// } else if (value[3] === 'x' && value[4] === 'x' && value[5] === 'x') {
+//   winner.innerHTML = 'x won'
+// } else if (value[6] === 'x' && value[7] === 'x' && value[8] === 'x') {
+//   winner.innerHTML = 'x won'
+// } else if (value[0] === 'x' && value[3] === 'x' && value[6] === 'x') {
+//   winner.innerHTML = 'x won'
+// } else if (value[1] === 'x' && value[4] === 'x' && value[7] === 'x') {
+//   winner.innerHTML = 'x won'
+// } else if (value[2] === 'x' && value[5] === 'x' && value[8] === 'x') {
+//   winner.innerHTML = 'x won'
+// } else if (value[2] === 'x' && value[4] === 'x' && value[6] === 'x') {
+//   winner.innerHTML = 'x won'
+//   gameLive = false
+// }
 
-// replayGame.addEventListener('click', () => {
-//   resetGame()
-// })
-// resetGame()
-// document.querySelector('.replay').addEventListener('click', () => {
-//   document.querySelectorAll('.box').forEach((box) => {
-//     box.remove()
-//   })
-// })
+const replayGame = document.getElementById('replay')
+
+replayGame.addEventListener('click', () => {
+  return box.remove.backgroundColor(box)
+})

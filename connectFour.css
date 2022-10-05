@@ -17,8 +17,9 @@ body {
     box-shadow: 0 0px 20px 0;
     margin:auto;
   }
-/* display each class box */
-  .box {
+  /* make column rows */
+
+  .cell {
     height: 100px;
     width: 100px;
     border: 2px solid;
@@ -32,6 +33,22 @@ body {
     background-color: antiquewhite;
     margin: auto;
   }
+
+/* display each class box */
+  /* .box {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 50%;
+    font-size: 120px;
+    text-align: center;
+    justify-content: center;
+    border: solid;
+    box-shadow: 0 0px 20px 0;
+    cursor: pointer;
+    background-color: antiquewhite;
+    margin: auto;
+  } */
 /* change button color  */
   button {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; 
@@ -40,4 +57,11 @@ body {
   /* change font for status */
   h2, h1 {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .yellow {
+    background-color: yellow;
+  }
+
+  .blue {
+    background-color: blue;
   }
