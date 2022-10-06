@@ -5,6 +5,7 @@ const won = document.querySelector('#valueWinner')
 const displayInTurn = document.querySelector('#inTurnPlayer')
 let column = document.querySelectorAll('.box')
 let yellow = document.querySelector('.yellow')
+const winningMessage = document.querySelector('.playerWins')
 
 const jsBoard = [
   '',
@@ -52,6 +53,7 @@ const jsBoard = [
 ]
 
 const winningConditions = [
+  [5, 10, 15, 20],
   [0, 1, 2, 3],
   [41, 40, 39, 38],
   [7, 8, 9, 10],
@@ -153,27 +155,25 @@ const checkWinningConditions = () => {
   let winner = false
   for (let i = 0; i < winningConditions.length; i++) {
     if (
-      jsBoard[winningConditions[i][0]] === jsBoard[winningConditions[i][1]] &&
-      jsBoard[winningConditions[i][1]] === jsBoard[winningConditions[i][2]] &&
-      jsBoard[winningConditions[i][2]] === jsBoard[winningConditions[i][3]]
+      jsBoard[winningConditions[i][0]] === 'yellow' &&
+      jsBoard[winningConditions[i][1]] === 'yellow' &&
+      jsBoard[winningConditions[i][2]] === 'yellow' &&
+      jsBoard[winningConditions[i][3]] === 'yellow'
     ) {
-      won.innerHTML = 'yellow won'
+      winningMessage.innerHTML = 'yellow won'
       winner = true
-      console.log('this is a winning condition')
+      console.log('this is a yellow winning condition')
+      console.log(jsBoard)
+    } else if (
+      jsBoard[winningConditions[i][0]] === 'blue' &&
+      jsBoard[winningConditions[i][1]] === 'blue' &&
+      jsBoard[winningConditions[i][2]] === 'blue' &&
+      jsBoard[winningConditions[i][3]] === 'blue'
+    ) {
+      winningMessage.innerHTML = 'blue won'
+      winner = true
+      console.log('this is a blue winning condition')
     }
-    // const zero = wins[last[a][0]]
-    // const one = wins[last[a][1]]
-    // const two = wins[last[a][2]]
-    // const three = wins[last[a][3]]
-    // if (
-    //   zero.classList.contains('yellow') &&
-    //   one.classList.contains('yellow') &&
-    //   two.classList.contains('yellow') &&
-    //   three.classList.contains('yellow')
-    // ) {
-    //   won.innerHTML = 'yellow won'
-    //   winner = true
-    //   console.log(zero)
   }
 }
 
