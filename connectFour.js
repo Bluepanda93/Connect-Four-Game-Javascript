@@ -165,7 +165,7 @@ const checkWinningConditions = () => {
       jsBoard[winningConditions[i][2]] === 'yellow' &&
       jsBoard[winningConditions[i][3]] === 'yellow'
     ) {
-      winningMessage.innerHTML = 'Yellow Won'
+      winningMessage.innerHTML = 'Yellow Won!'
       winner = true
       console.log('this is a yellow winning condition')
       console.log(jsBoard)
@@ -175,7 +175,7 @@ const checkWinningConditions = () => {
       jsBoard[winningConditions[i][2]] === 'blue' &&
       jsBoard[winningConditions[i][3]] === 'blue'
     ) {
-      winningMessage.innerHTML = 'Blue Won'
+      winningMessage.innerHTML = 'Blue Won!'
       winner = true
       console.log('this is a blue winning condition')
     }
