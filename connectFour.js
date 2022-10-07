@@ -137,7 +137,7 @@ column.forEach((box) => {
     let indexPosition = parseInt(cells[last].id)
     if (inTurn === 'yellow') {
       jsBoard[indexPosition] = 'yellow'
-      displayInTurn.innerHTML = 'blue'
+      displayInTurn.innerHTML = 'Blue'
       cells[last].classList.add('yellow')
       inTurn = 'blue'
       if (last >= 0) {
@@ -145,7 +145,7 @@ column.forEach((box) => {
       }
     } else if (inTurn === 'blue') {
       jsBoard[indexPosition] = 'blue'
-      displayInTurn.innerHTML = 'yellow'
+      displayInTurn.innerHTML = 'Yellow'
       cells[last].classList.add('blue')
       inTurn = 'yellow'
       if (last >= 0) {
@@ -165,7 +165,7 @@ const checkWinningConditions = () => {
       jsBoard[winningConditions[i][2]] === 'yellow' &&
       jsBoard[winningConditions[i][3]] === 'yellow'
     ) {
-      winningMessage.innerHTML = 'yellow won'
+      winningMessage.innerHTML = 'Yellow Won'
       winner = true
       console.log('this is a yellow winning condition')
       console.log(jsBoard)
@@ -175,7 +175,7 @@ const checkWinningConditions = () => {
       jsBoard[winningConditions[i][2]] === 'blue' &&
       jsBoard[winningConditions[i][3]] === 'blue'
     ) {
-      winningMessage.innerHTML = 'blue won'
+      winningMessage.innerHTML = 'Blue Won'
       winner = true
       console.log('this is a blue winning condition')
     }
