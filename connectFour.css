@@ -56,9 +56,16 @@ body {
     justify-content: auto;
   }
   /* change font for status */
-  h2, h1 {
+  h1 {
     font-family: Alkalami;
+    font-size: 50px;
   }
+
+  h2 {
+    font-family: Alkalmi;
+    font-size: 40px;
+  }
+
   .yellow {
     background-color: yellow;
   }
