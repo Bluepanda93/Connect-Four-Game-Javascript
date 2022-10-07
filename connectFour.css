@@ -29,7 +29,7 @@ body {
     justify-content: center;
     border: solid;
     box-shadow: 0 0px 20px 0;
-    cursor: pointer;
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
     background-color: antiquewhite;
     margin: auto;
   }
@@ -54,16 +54,19 @@ body {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; 
     background-color: greenyellow;
     justify-content: auto;
+    cursor: pointer;
   }
   /* change font for status */
   h1 {
     font-family: Alkalami;
     font-size: 50px;
+    filter: drop-shadow(10px 10px 10px #A4BBFF);
   }
 
   h2 {
     font-family: Alkalmi;
     font-size: 40px;
+    filter: drop-shadow(10px 10px 10px #A4BBFF);
   }
 
   .yellow {
@@ -77,3 +80,6 @@ body {
   .antiquewhite {
     background-color: antiquewhite;
   }
+
+  /* resources cited:
+  https://livecodestream.dev/post/8-cool-css-tips-tricks-to-impress/ */
