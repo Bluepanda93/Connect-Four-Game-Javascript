@@ -186,10 +186,5 @@ const replayGame = document.querySelector('.replayButton')
 let cells = document.querySelectorAll('.cell')
 
 replayGame.addEventListener('click', () => {
-  cells.forEach((cell) => {
-    cell.classList.add('antiquewhite')
-    console.log(cell)
-  })
-  // cell.classList.remove('.yellow')
-  // console.log(cell)
+  window.location.reload()
 })
