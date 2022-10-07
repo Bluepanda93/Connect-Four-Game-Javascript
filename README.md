@@ -6,6 +6,15 @@
 
 ![Connect Four](https://raw.githubusercontent.com/Acamol/connect-four/screenshot/screenshot1.gif)
 
+## Getting Started
+
+- Fork and Clone this repository
+- cd into the directory on you local machine
+- Open server 'welcome.html'
+- Find game logic in 'connectFour.js'
+- Find game data in 'index.html'
+- Find style for game page in 'connectFour.css
+
 ## The Game
 
 This beloved two player game has many different names and can be found being played in countries all over the world. Originaly played as a house hold board game, it can now be found on platforms of all kinds. The object of the game is simple, get four of the same colors in a row and win! Players alternate turn placing one of two color chips or pieces in a specific slot on the board and the first one to achieve four of their color in a row is the winner of the game. This is a game for all ages.
